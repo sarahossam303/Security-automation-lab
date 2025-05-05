@@ -17,7 +17,7 @@ jobs:
       - name: Run Docker container and expose port 80
         run: docker run -p 80:80 image -d
       - name: Run OWASP ZAP baseline scan
-        uses: zaproxy/action-baseline@v0.10.0
+        uses: zaproxy/action-baseline@master
         with:
           target: http://localhost
     # 1. Checkout the Code
