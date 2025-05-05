@@ -1,1 +1,19 @@
 
+name: Dast
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  zap-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    # 1. Checkout the Code
+    # 2. Build the docker image localy 
+    # 3. Run the docker Container
+    # 4. Run OWASP ZAP on the running webserver
+
