@@ -17,6 +17,6 @@ jobs:
      - uses: aquasecurity/trivy-action@v0.15.0
        with:
           scan-type: image
-          image-ref: my-app:latest
+          image-ref: image
           format: table
           exit-code: 0  # Change to 1 if you want the job to fail on vulnerabilities
