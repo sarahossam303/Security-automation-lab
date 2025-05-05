@@ -15,7 +15,7 @@ jobs:
       - uses: docker/setup-buildx-action@v3
       - run: docker build -t image .
       - name: Run Docker container and expose port 80
-        run: docker run -p 80:80 image -d
+        run: docker run -d -p 80:80 image
       - name: Run OWASP ZAP baseline scan
         uses: zaproxy/action-baseline@master
         with:
