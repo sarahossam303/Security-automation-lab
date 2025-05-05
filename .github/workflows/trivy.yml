@@ -15,10 +15,4 @@ jobs:
     - uses: actions/checkout@v4
     - uses: docker/setup-buildx-action@v3
     - name: Build Docker image (without pushing)
-      uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: false
-          load: true  # Loads the image into the GitHub Actions runner's Docker engine
-          tags: my-app:latest
-# 4. Scan with trivy the built image
+        run: docker build -t image .
