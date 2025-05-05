@@ -17,4 +17,3 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: IAC
-          file: IAC/insecure_s3.tf
